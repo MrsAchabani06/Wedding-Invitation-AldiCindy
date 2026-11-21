@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Wedding of Aldi &amp; Cindy</title>
+<meta property="og:title" content="The Wedding of Aldi & Cindy">
+<meta property="og:description" content="Minggu, 6 Desember 2026 · Nganjuk">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cinzel+Decorative:wght@400;700&family=Pinyon+Script&family=Poppins:wght@600&family=Libre+Bodoni:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Noto+Serif:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="locked">
+
+<audio id="musik" src="musik/lagu-pernikahan.mp3" preload="auto"></audio>
+
+<!-- COVER -->
+<section id="cover" class="cover foto" style="--bg:url('foto/cover.jpg')">
+  <div class="cover-bawah">
+    <p class="judul-hias">The Wedding of</p>
+    <h1 class="cover-nama">Aldi<span>&amp;</span>Cindy</h1>
+    <p class="kecil">Kepada Yth. Bapak/Ibu/Saudara/i</p>
+    <p id="namaTamu" class="nama-tamu">Nama Tamu</p>
+    <button id="btnBuka" class="tombol">Buka Undangan</button>
+  </div>
+</section>
+
+<main id="konten" class="konten" hidden>
+
+  <button id="btnMusik" class="musik" aria-label="Putar atau jeda musik">
+    <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="none" stroke="#fff" stroke-width="2"/><circle cx="12" cy="12" r="6" fill="none" stroke="#fff" stroke-width="1.2" opacity=".7"/><circle cx="12" cy="12" r="2.6" fill="#fff"/></svg>
+  </button>
+  <button id="btnAtas" class="ke-atas" aria-label="Kembali ke atas">
+    <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M5 5h14M6 15l6-6 6 6" fill="none" stroke="#2b2b2b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+
+  <!-- PEMBUKA + HITUNG MUNDUR -->
+  <section class="hero foto" style="--bg:url('foto/hero.jpg')">
+    <div class="cover-bawah">
+      <p class="judul-hias anim kata" style="--d:.55s">The Wedding of</p>
+      <div class="cover-baris anim" data-a="zoom" style="--d:1s">
+        <div class="cover-nama">Aldi<span>&amp;</span>Cindy</div>
+        <i class="garis-tegak"></i>
+        <div class="cover-tgl">Minggu<br>06.12.2026</div>
+      </div>
+      <p class="hero-kecil anim" style="--d:1.4s">Menuju Hari Bahagia</p>
+      <div id="hitung" class="hitung anim induk" style="--d:1.5s">
+        <div style="--i:0"><b id="cHari">00</b><span>Hari</span></div>
+        <div style="--i:1"><b id="cJam">00</b><span>Jam</span></div>
+        <div style="--i:2"><b id="cMenit">00</b><span>Menit</span></div>
+        <div style="--i:3"><b id="cDetik">00</b><span>Detik</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SALAM + AYAT -->
+  <section class="bagian terang salam">
+    <img class="hias gunungan anim" data-a="zoom" src="foto/ornamen/gunungan.webp" alt="" aria-hidden="true">
+    <p class="salam-judul anim kata"><em>Assalamu’alaikum Wr. Wb.</em></p>
+    <p class="anim" data-a="turun">Tanpa mengurangi rasa hormat, kami mengundang Bapak/Ibu/Saudara/i untuk menghadiri pernikahan kami.</p>
+    <p class="arab anim" data-a="blur" lang="ar" dir="rtl">وَمِنْ ءَايَٰتِهِۦٓ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَٰجًا لِّتَسْكُنُوٓا۟ إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً ۚ إِنَّ فِى ذَٰلِكَ لَءَايَٰتٍ لِّقَوْمٍ يَتَفَكَّرُونَ</p>
+    <p class="ayat anim kata">“Di antara tanda-tanda (kebesaran)-Nya ialah bahwa Dia menciptakan pasangan-pasangan untukmu dari (jenis) dirimu sendiri agar kamu merasa tenteram kepadanya. Dia menjadikan di antaramu rasa cinta dan kasih sayang. Sesungguhnya pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir.”</p>
+    <p class="sumber anim" data-a="zoom"><i></i>QS. Ar-Rum: 21<i></i></p>
+  </section>
+
+  <!-- MEMPELAI PRIA -->
+  <section class="bagian terang mempelai">
+    <div class="baris pria">
+      <h2 class="vertikal anim" data-a="kiri"><small>The</small> Groom</h2>
+      <figure class="kartu-foto anim" data-a="kanan" style="--bg:url('foto/aldi.jpg');--pos:center">
+        <figcaption class="kotak-nama">
+          <h3>Aldi Ridwan Achabani</h3>
+          <p>Putra ketiga dari<br>Bapak Nur Wakhid &amp; Ibu Zaitun Fatimah</p>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- MEMPELAI WANITA -->
+  <section class="bagian terang mempelai">
+    <div class="baris wanita">
+      <figure class="kartu-foto anim" data-a="kiri" style="--bg:url('foto/cindy.jpg');--pos:center">
+        <figcaption class="kotak-nama">
+          <h3>Cindy Febria Purnama</h3>
+          <p>Putri pertama dari<br>Bapak Purnomo &amp; Ibu Chayun Salisun Nisak</p>
+        </figcaption>
+      </figure>
+      <h2 class="vertikal anim" data-a="kanan"><small>The</small> Bride</h2>
+    </div>
+  </section>
+
+  <!-- ACARA -->
+  <section class="bagian acara foto" style="--bg:url('foto/acara.jpg')">
+    <div class="ac-isi">
+      <svg class="ac-ikon anim" data-a="zoom" viewBox="0 0 64 40" width="76" height="48" aria-hidden="true"><g fill="none" stroke="#f1d27a" stroke-width="2.2"><circle cx="24" cy="20" r="13"/><circle cx="40" cy="20" r="13"/><path d="M24 4l3 4-3 3-3-3z" stroke-width="1.8"/></g></svg>
+      <h2 class="ac-judul anim kata">Save The Date</h2>
+
+      <div class="ac-pembagi anim" data-a="zoom"><i></i><svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="none" stroke="#fff" stroke-width="2"/><path d="M12 6v6l4 2.5" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg><i></i></div>
+
+      <div class="ac-tgl anim" data-a="zoom"><span>Minggu</span><b>6</b><span>Desember<br>2026</span></div>
+
+      <div class="ac-jadwal anim" data-a="turun">
+        <div><h3>Akad Nikah</h3><p>08.30 WIB</p></div>
+        <i></i>
+        <div><h3>Resepsi</h3><p>11.00 – 14.00 WIB</p></div>
+      </div>
+
+      <div class="ac-pembagi anim" data-a="zoom"><i></i><svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 10-14 0c0 5.8 7 12 7 12z" fill="#f1d27a"/><circle cx="12" cy="10" r="2.6" fill="#2b2118"/></svg><i></i></div>
+
+      <p class="ac-lokasi anim" data-a="turun"><strong>Bebek Goreng H. Makrus</strong>RT.02/RW.02, Jarakan, Sidoharjo,<br>Kec. Tanjunganom, Kabupaten Nganjuk,<br>Jawa Timur 64482</p>
+
+      <div class="anim" data-a="zoom">
+        <a class="ac-tombol" href="https://maps.app.goo.gl/QM5pQ4fwTTvsQVhXA?g_st=ac" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M9 4L3 6.5v13L9 17l6 2.5 6-2.5v-13L15 7 9 4zm0 0v13m6-10v12.5" fill="none" stroke="#fff" stroke-width="1.8" stroke-linejoin="round"/></svg>Google Maps</a>
+        <a class="ac-tombol" id="btnKalender" href="#">Simpan di Kalender</a>
+        <p class="ac-catatan">*Silakan klik tombol untuk membuka lokasi acara</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALERI -->
+  <section class="bagian krem galeri">
+    <img class="pojok kanan-atas bunga" src="foto/ornamen/bunga-cokelat.webp" alt="" aria-hidden="true">
+    <h2 class="judul-sapuan anim kata">Gallery</h2>
+    <div class="slider-wrap anim" data-a="zoom">
+      <div class="slider" id="slider" tabindex="0" aria-label="Galeri foto, geser untuk melihat foto lainnya">
+        <figure class="slide"><img src="foto/galeri-0.jpg" alt="Foto prewedding" loading="lazy" draggable="false" onerror="this.parentNode.remove()"></figure>
+        <figure class="slide"><img src="foto/galeri-2.jpg" alt="Foto prewedding 2" loading="lazy" draggable="false" onerror="this.parentNode.remove()"></figure>
+        <figure class="slide"><img src="foto/galeri-3.jpg" alt="Foto prewedding 3" loading="lazy" draggable="false" onerror="this.parentNode.remove()"></figure>
+        <figure class="slide"><img src="foto/galeri-4.jpg" alt="Foto prewedding 4" loading="lazy" draggable="false" onerror="this.parentNode.remove()"></figure>
+        <figure class="slide"><img src="foto/galeri-5.jpg" alt="Foto prewedding 5" loading="lazy" draggable="false" onerror="this.parentNode.remove()"></figure>
+        <figure class="slide"><img src="foto/galeri-6.jpg" alt="Foto prewedding 6" loading="lazy" draggable="false" onerror="this.parentNode.remove()"></figure>
+        <figure class="slide"><img src="foto/galeri-7.jpg" alt="Foto prewedding 7" loading="lazy" draggable="false" onerror="this.parentNode.remove()"></figure>
+        <figure class="slide"><img src="foto/galeri-8.jpg" alt="Foto prewedding 8" loading="lazy" draggable="false" onerror="this.parentNode.remove()"></figure>
+        <figure class="slide"><img src="foto/galeri-10.jpg" alt="Foto prewedding 10" loading="lazy" draggable="false" onerror="this.parentNode.remove()"></figure>
+      </div>
+      <button class="sl-btn sl-prev" id="slPrev" aria-label="Foto sebelumnya"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <button class="sl-btn sl-next" id="slNext" aria-label="Foto berikutnya"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <div class="sl-dots" id="slDots"></div>
+    </div>
+    <div class="video anim">
+      <video controls preload="metadata" playsinline poster="foto/poster-video.jpg">
+        <source src="video/prewedding.mp4" type="video/mp4">
+      </video>
+    </div>
+  </section>
+
+  <!-- KISAH -->
+  <section class="bagian terang kisah">
+    <img class="pojok kanan-atas" src="foto/ornamen/daun.webp" alt="" aria-hidden="true">
+    <h2 class="judul-sapuan anim kata">Love Story</h2>
+    <figure class="bingkai-kartu kecil anim" data-a="zoom"><img src="foto/kisah.jpg" alt="Perjalanan kami" onerror="this.parentNode.classList.add('kosong')"></figure>
+    <ol class="alur">
+      <li class="anim" data-a="kiri">
+        <h3>Bermula dari Keakraban</h3>
+        <p>Di sebuah acara keakraban di masjid, dua orang yang belum saling mengenal dipertemukan. Hanya sapaan sederhana, namun dari sanalah Allah mulai menuliskan cerita kami.</p>
+      </li>
+      <li class="anim" data-a="kiri">
+        <h3>Mengenal dengan Niat Baik</h3>
+        <p>Lewat obrolan yang terasa ringan, kami belajar saling memahami dan saling mendoakan. Hari demi hari, rasa nyaman itu tumbuh menjadi keyakinan.</p>
+      </li>
+      <li class="anim" data-a="kiri">
+        <h3>30 Agustus, Sebuah Janji</h3>
+        <p>Dua keluarga bertemu dalam sebuah lamaran. Doa dipanjatkan, restu diberikan, dan niat baik kami pun diresmikan.</p>
+      </li>
+      <li class="anim" data-a="kiri">
+        <h3>6 Desember 2026</h3>
+        <p>Kini kami melangkah ke jenjang yang lebih sakral, dan kami ingin Anda hadir sebagai saksi sekaligus pendoa.</p>
+      </li>
+    </ol>
+  </section>
+
+  <!-- RSVP -->
+  <section class="bagian krem rsvp">
+    <img class="pojok kiri-atas" src="foto/ornamen/daun.webp" alt="" aria-hidden="true">
+    <h2 class="judul-sapuan anim kata">Join With Us</h2>
+    <p class="anim">Kabari kami lewat WhatsApp agar kami dapat menyiapkan tempat untuk Anda.</p>
+    <div class="form anim">
+      <label for="rNama">Nama</label>
+      <input id="rNama" type="text" autocomplete="name">
+      <label for="rHadir">Kehadiran</label>
+      <select id="rHadir">
+        <option value="Insya Allah hadir">Insya Allah hadir</option>
+        <option value="Mohon maaf, belum bisa hadir">Mohon maaf, belum bisa hadir</option>
+      </select>
+      <label for="rJumlah">Jumlah tamu</label>
+      <select id="rJumlah">
+        <option>1</option><option>2</option><option>3</option><option>4</option>
+      </select>
+      <label for="rUcapan">Ucapan dan doa</label>
+      <textarea id="rUcapan" rows="3"></textarea>
+      <input id="rJebakan" class="jebakan" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <button id="btnKirim" class="tombol">Kirim lewat WhatsApp</button>
+      <p id="rStatus" class="r-status" role="status" aria-live="polite"></p>
+      <button id="btnWA" class="tombol garis" type="button" hidden>Kabari juga lewat WhatsApp</button>
+    </div>
+
+    <div id="ucapanBox" class="ucapan" hidden>
+      <h3>Ucapan &amp; Doa</h3>
+      <div id="ucapanList" class="ucapan-list"><p class="ucapan-kosong">Memuat ucapan…</p></div>
+    </div>
+  </section>
+
+  <!-- HADIAH -->
+  <section class="bagian terang hadiah">
+    <img class="pojok kanan-atas bunga" src="foto/ornamen/bunga-krem.webp" alt="" aria-hidden="true">
+    <h2 class="judul-sapuan anim kata">Wedding Gift</h2>
+    <p class="anim">Doa restu Anda sudah sangat berarti bagi kami. Bila ingin berbagi tanda kasih, dapat melalui:</p>
+
+    <div class="kartu anim" data-a="zoom">
+      <h3>Transfer Bank</h3>
+      <p class="bank">BCA</p>
+      <p class="rek" id="noRek">1420738273</p>
+      <p>a.n. Cindy Febria Purnama</p>
+      <button class="tombol kecil" data-salin="#noRek">Salin Nomor</button>
+    </div>
+
+    <div class="kartu anim" data-a="zoom">
+      <h3>DANA</h3>
+      <img class="qris" src="foto/qris.png" alt="Kode QR DANA" onerror="this.closest('.kartu').remove()">
+      <p>Scan lewat aplikasi DANA<br>a.n. Cindy Febria</p>
+    </div>
+
+    <div class="kartu anim" data-a="zoom">
+      <h3>Kirim Hadiah</h3>
+      <p id="alamat">Puri Tjaraka Warujayeng Blok B14, Lingkungan Pengkol Warujayeng, Tanjunganom, Nganjuk</p>
+      <button class="tombol kecil" data-salin="#alamat">Salin Alamat</button>
+    </div>
+  </section>
+
+  <!-- PENUTUP -->
+  <footer class="penutup foto" style="--bg:url('foto/penutup.jpg')">
+    <div class="kotak anim" data-a="zoom">
+      <p>Merupakan kebahagiaan dan kehormatan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir dan memberikan doa restu.</p>
+      <p><em>Wassalamu’alaikum Wr. Wb.</em></p>
+      <p class="tanda">Aldi &amp; Cindy</p>
+    </div>
+  </footer>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
